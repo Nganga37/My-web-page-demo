@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jersey Soccer Clothing | Official Store</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+            border-bottom: 4px solid #d63031;
+        }
+
+        .store-logo {
+            height: 120px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* PRODUCT GRID STYLES */
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background: #2d2d2d;
+            border-radius: 12px;
+            padding: 15px;
+            width: 250px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            /* For the badge */
+        }
+
+        /* Best Seller Badge */
+        .best-seller-badge {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            background: #f1c40f;
+            color: #000;
+            padding: 5px 12px;
+            font-weight: bold;
+            font-size: 12px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            background: #333;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            border-radius: 8px;
+            background-color: white;
+            border-bottom: 3px solid #d63031;
+        }
+
+        .product-info h3 {
+            font-size: 18px;
+            margin: 10px 0 5px 0;
+        }
+
+        .price {
+            font-size: 22px;
+            color: #fab1a0;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* BUTTON ANIMATION STYLES */
+        .buy-btn {
+            background-color: #d63031;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .buy-btn:hover {
+            background-color: #ff7675;
+        }
+
+        .buy-btn:active {
+            transform: scale(0.95);
+        }
+
+        .buy-btn.added {
+            background-color: #27ae60 !important;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #27ae60;
+        }
+
+        /* MEDIA SECTION STYLES */
+        .media-section {
+            margin-top: 50px;
+            padding: 30px;
+            background: #000;
+            border-radius: 15px;
+            border: 1px solid #333;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(214, 48, 49, 0.3);
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        audio {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="this-logo-perfect-clothing-company-260nw-2317697209.png" alt="Jersey Soccer Clothing Logo"
+            class="store-logo">
+    </header>
+
+    <div class="container">
+        <h1>New Season Arrivals</h1>
+        <p>Official Match Kits - 2024/2025</p>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <div class="best-seller-badge">Best Seller</div>
+                <img src="images (7).jfif" alt="Chattanooga Red Wolves Kit">
+                <div class="product-info">
+                    <h3>Chattanooga Red Wolves</h3>
+                    <div class="price">$95.00</div>
+                    <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="download (3).jfif" alt="AC Milan Kit">
+                <div class="product-info">
+                    <h3>AC Milan Home</h3>
+                    <div class="price">$89.99</div>
+                    <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="download.jfif" alt="Real Madrid Kit">
+                <div class="product-info">
+                    <h3>Real Madrid Classic</h3>
+                    <div class="price">$99.99</div>
+                    <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images (1).jfif" alt="Arsenal Kit">
+                <div class="product-info">
+                    <h3>Arsenal Home</h3>
+                    <div class="price">$84.99</div>
+                    <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images (2).jfif" alt="Kenya Kit">
+                <div class="product-info">
+                    <h3>Kenya National Team</h3>
+                    <div class="price">$75.00</div>
+                    <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images (3).jfif" alt="Liverpool Kit">
+                <div class="product-info">
+                    <h3>Liverpool Home</h3>
+                    <div class="price">$89.99</div>
+                    <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images (4).jfif" alt="Man City Kit">
+                <div class="product-info">
+                    <h3>Man City Dark</h3>
+                    <div class="price">$95.00</div>
+                    <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images (5).jfif" alt="Barcelona Kit">
+                <div class="product-info">
+                    <h3>FC Barcelona Home</h3>
+                    <div class="price">$110.00</div>
+                    <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images.jfif" alt="Portugal Kit">
+                <div class="product-info">
+                    <h3>Portugal Black Edition</h3>
+                    <div class="price">$105.00</div>
+                    <button class="buy-btn" onclick="addToCart(this)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="media-section">
+            <h2>Experience The Game</h2>
+
+            <h3>Featured Promo</h3>
+            <div class="video-container">
+                <video controls>
+                    <source src="A Cinematic Soccer Commercial __ Sony a7siii.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <br><br>
+            <h3>Stadium Ambience</h3>
+            <audio controls>
+                <source src="music.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+
+    <script>
+        function addToCart(buttonElement) {
+            const originalText = "Add to Cart";
+            buttonElement.classList.add('added');
+            buttonElement.innerHTML = "Added! 🛒";
+
+            setTimeout(() => {
+                buttonElement.classList.remove('added');
+                buttonElement.innerHTML = originalText;
+            }, 2000);
+        }
+    </script>
+
+</body>
+
+</html>
